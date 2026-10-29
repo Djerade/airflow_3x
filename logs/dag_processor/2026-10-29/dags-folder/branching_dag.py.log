@@ -21,3 +21,5 @@
 {"timestamp":"2026-10-29T10:18:59.997975","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/branching_dag.py","logger":"airflow.models.dagbag.DagBag"}
 {"timestamp":"2026-10-29T10:19:30.701960","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/branching_dag.py","logger":"airflow.models.dagbag.DagBag"}
 {"timestamp":"2026-10-29T10:20:01.320794","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/branching_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-10-29T10:20:32.355836","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/branching_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-10-29T10:21:03.217778","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/branching_dag.py","logger":"airflow.models.dagbag.DagBag"}
