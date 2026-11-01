@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_persons
+    description: "Personnes nettoyées avec une note et un grade."
+    columns:
+      - name: id
+        description: "Identifiant unique de la personne."
+        data_tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Nom en majuscules."
+        data_tests:
+          - not_null
+      - name: score
+        data_tests:
+          - not_null
+      - name: grade
+        data_tests:
+          - accepted_values:
+              values: ["A", "B", "C"]

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: persons_summary
+    description: "Agrégat des personnes par grade."
+    columns:
+      - name: grade
+        data_tests:
+          - unique
+          - not_null
+      - name: person_count
+        data_tests:
+          - not_null

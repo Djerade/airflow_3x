@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Données brutes chargées par la tâche Airflow `collecte`."
+    schema: raw
+    tables:
+      - name: persons
+        loaded_at_field: loaded_at
+        freshness:
+          warn_after: {count: 1, period: day}
+          error_after: {count: 2, period: day}

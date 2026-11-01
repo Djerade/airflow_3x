@@ -1,5 +1,8 @@
 x-airflow-common: &airflow-common
-  image: apache/airflow:3.0.0
+  image: airflow-3x:latest
+  build:
+    context: .
+    dockerfile: Dockerfile
   environment: &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
@@ -16,11 +19,16 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__EXECUTION_API_SERVER_URL: 'http://airflow-api-server:8080/execution/'
     # Clé fixe partagée pour les JWT tokens entre scheduler et api-server
     AIRFLOW__API_AUTH__JWT_SECRET: 'nP0FLDJ0wR4ny4WM9YOhTRNsGhHElliGDiBM9w2Gsyk='
+    # Connexion utilisée par Cosmos pour construire le profil dbt
+    AIRFLOW_CONN_POSTGRES_DEFAULT: 'postgresql://airflow:airflow@postgres:5432/airflow'
+    DBT_PROJECT_DIR: '/opt/airflow/dbt'
+    DBT_EXECUTABLE_PATH: '/home/airflow/dbt_venv/bin/dbt'
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
     - ./config:/opt/airflow/config
+    - ./dbt:/opt/airflow/dbt
   user: "${AIRFLOW_UID:-50000}:0"
   depends_on: &airflow-common-depends-on
     postgres:

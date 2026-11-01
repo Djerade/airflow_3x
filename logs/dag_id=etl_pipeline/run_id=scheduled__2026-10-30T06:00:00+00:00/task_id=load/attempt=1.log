@@ -1,0 +1,9 @@
+{"timestamp":"2026-10-30T07:13:46.858464","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-10-30T07:13:46.861576","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/etl_pipeline_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-10-30T07:13:47.145374Z","level":"info","event":"Chargement des données...","chan":"stdout","logger":"task"}
+{"timestamp":"2026-10-30T07:13:47.146126Z","level":"info","event":"  -> Chargé: ALICE | Score: 85 | Grade: B","chan":"stdout","logger":"task"}
+{"timestamp":"2026-10-30T07:13:47.146704Z","level":"info","event":"  -> Chargé: BOB | Score: 92 | Grade: A","chan":"stdout","logger":"task"}
+{"timestamp":"2026-10-30T07:13:47.147135Z","level":"info","event":"  -> Chargé: CHARLIE | Score: 78 | Grade: C","chan":"stdout","logger":"task"}
+{"timestamp":"2026-10-30T07:13:47.147620Z","level":"info","event":"3 enregistrements chargés avec succès","chan":"stdout","logger":"task"}
+{"timestamp":"2026-10-30T07:13:47.057767","level":"info","event":"Done. Returned value was: 3 enregistrements chargés avec succès","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2026-10-30T07:13:47.058357","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01a18ba8-2a49-7caf-ab22-24496bb64982'), task_id='load', dag_id='etl_pipeline', run_id='scheduled__2026-10-30T06:00:00+00:00', try_number=1, map_index=-1, hostname='a9819e133492', context_carrier=None, task=<Task(_PythonDecoratedOperator): load>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 10, 30, 7, 13, 46, 715393, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}
