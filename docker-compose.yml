@@ -105,5 +105,19 @@ services:
     environment:
       <<: *airflow-common-env
 
+  minio:
+    image: minio/minio:latest
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio-data:/data
+    restart: always
+
 volumes:
   postgres-db-volume:
+  minio-data:
