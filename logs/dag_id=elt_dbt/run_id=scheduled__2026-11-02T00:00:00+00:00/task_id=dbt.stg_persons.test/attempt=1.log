@@ -1,0 +1,55 @@
+{"timestamp":"2026-11-02T14:38:22.441725","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-11-02T14:38:22.442204","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/elt.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-11-02T14:38:22.495405","level":"info","event":"::group::Cosmos DAG parsing logs","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:22.496190","level":"info","event":"Cosmos cache dir resolved to /tmp/cosmos/elt_dbt__dbt","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:22.496327","level":"info","event":"Trying to parse the dbt project using dbt ls cache cosmos_cache__elt_dbt__dbt...","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:22.497618","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2026-11-02T14:38:22.514433","level":"info","event":"Cosmos performance: time to calculate cache identifier cosmos_cache__elt_dbt__dbt for current version: 0.002177020000004859","logger":"cosmos.cache"}
+{"timestamp":"2026-11-02T14:38:22.514591","level":"info","event":"Cosmos performance [0472832dff46|98]: The cache size for cosmos_cache__elt_dbt__dbt is 9499","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:22.515173","level":"info","event":"Cosmos performance: Cache hit for cosmos_cache__elt_dbt__dbt - 4cd7b6cb8c825632f6892eaeedcff9cd,d41d8cd98f00b204e9800998ecf8427e","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:22.515277","level":"info","event":"Total nodes: 11","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:22.515349","level":"info","event":"Total filtered nodes: 11","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:22.515436","level":"info","event":"Cosmos performance (elt_dbt__dbt) - [0472832dff46|98]: It took 0.0191s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:22.515746","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:22.517687","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:22.520740","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:22.522018","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:22.522941","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:22.524124","level":"info","event":"Cosmos performance (elt_dbt__dbt) - [0472832dff46|98]: It took 0.00864s to build the Airflow DAG.","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:22.524230","level":"info","event":"::endgroup::Cosmos DAG parsing logs","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:22.526185","level":"warning","event":"Pydantic serializer warnings:\n  PydanticSerializationUnexpectedValue(Expected `str` - serialized value may not be as expected [input_value={'version': '4cd7b6cb8c82... 'task_group_id': 'dbt'}, input_type=dict])","category":"UserWarning","filename":"/home/airflow/.local/lib/python3.12/site-packages/pydantic/main.py","lineno":463,"logger":"py.warnings"}
+{"timestamp":"2026-11-02T14:38:22.533062","level":"info","event":"Could not import dbtRunner. Falling back to subprocess for invoking dbt.","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:22.533523","level":"info","event":"Cloning project to writable temp directory /tmp/tmp_sdfa25c from /opt/airflow/dbt","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:22.534218","level":"info","event":"Partial parse is enabled and the latest partial parse file is /tmp/cosmos/elt_dbt__dbt/target/partial_parse.msgpack","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:22.541494","level":"info","event":"Profile caching is enable.","logger":"cosmos.config"}
+{"timestamp":"2026-11-02T14:38:22.542743","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2026-11-02T14:38:22.543289","level":"warning","event":"empty cryptography key - values will not be stored encrypted.","logger":"airflow.models.crypto"}
+{"timestamp":"2026-11-02T14:38:22.543565","level":"info","event":"Connection Retrieved 'postgres_default'","logger":"airflow.hooks.base"}
+{"timestamp":"2026-11-02T14:38:22.543859","level":"info","event":"Profile found in cache using profile: /tmp/cosmos/profile/7089df7008d33d5c11978915b776450b3c7d142b5a166e550d7df5d94b1a9436/profiles.yml.","logger":"cosmos.config"}
+{"timestamp":"2026-11-02T14:38:22.544118","level":"info","event":"Trying to run the command:\n ['/home/airflow/dbt_venv/bin/dbt', 'test', '--select', 'stg_persons', '--project-dir', '/tmp/tmp_sdfa25c', '--profiles-dir', '/tmp/cosmos/profile/7089df7008d33d5c11978915b776450b3c7d142b5a166e550d7df5d94b1a9436', '--profile', 'elt_demo', '--target', 'dev']\nFrom /tmp/tmp_sdfa25c","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:22.544219","level":"info","event":"Tmp dir root location: \n /tmp","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:22.544264","level":"info","event":"Running command: ['/home/airflow/dbt_venv/bin/dbt', 'test', '--select', 'stg_persons', '--project-dir', '/tmp/tmp_sdfa25c', '--profiles-dir', '/tmp/cosmos/profile/7089df7008d33d5c11978915b776450b3c7d142b5a166e550d7df5d94b1a9436', '--profile', 'elt_demo', '--target', 'dev']","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:22.553059","level":"info","event":"Command output:","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:24.476703","level":"info","event":"\u001b[0m14:38:24  Running with dbt=1.13.0-b1","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:24.714055","level":"info","event":"\u001b[0m14:38:24  Registered adapter: postgres=1.11.0","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.169505","level":"info","event":"\u001b[0m14:38:25  Found 2 models, 8 data tests, 1 source, 477 macros","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.171443","level":"info","event":"\u001b[0m14:38:25  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.171637","level":"info","event":"\u001b[0m14:38:25  Concurrency: 1 threads (target='dev')","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.171892","level":"info","event":"\u001b[0m14:38:25  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.250873","level":"info","event":"\u001b[0m14:38:25  1 of 5 START test accepted_values_stg_persons_grade__A__B__C ................... [RUN]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.329978","level":"info","event":"\u001b[0m14:38:25  1 of 5 PASS accepted_values_stg_persons_grade__A__B__C ......................... [\u001b[32mPASS\u001b[0m in 0.08s]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.334336","level":"info","event":"\u001b[0m14:38:25  2 of 5 START test not_null_stg_persons_id ...................................... [RUN]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.405766","level":"info","event":"\u001b[0m14:38:25  2 of 5 PASS not_null_stg_persons_id ............................................ [\u001b[32mPASS\u001b[0m in 0.07s]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.409009","level":"info","event":"\u001b[0m14:38:25  3 of 5 START test not_null_stg_persons_name .................................... [RUN]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.437874","level":"info","event":"\u001b[0m14:38:25  3 of 5 PASS not_null_stg_persons_name .......................................... [\u001b[32mPASS\u001b[0m in 0.03s]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.439464","level":"info","event":"\u001b[0m14:38:25  4 of 5 START test not_null_stg_persons_score ................................... [RUN]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.544681","level":"info","event":"\u001b[0m14:38:25  4 of 5 PASS not_null_stg_persons_score ......................................... [\u001b[32mPASS\u001b[0m in 0.10s]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.545736","level":"info","event":"\u001b[0m14:38:25  5 of 5 START test unique_stg_persons_id ........................................ [RUN]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.570041","level":"info","event":"\u001b[0m14:38:25  5 of 5 PASS unique_stg_persons_id .............................................. [\u001b[32mPASS\u001b[0m in 0.02s]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.586465","level":"info","event":"\u001b[0m14:38:25  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.587011","level":"info","event":"\u001b[0m14:38:25  Finished running 5 data tests in 0 hours 0 minutes and 0.41 seconds (0.41s).","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.693394","level":"info","event":"\u001b[0m14:38:25  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.694126","level":"info","event":"\u001b[0m14:38:25  \u001b[32mCompleted successfully\u001b[0m","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.694640","level":"info","event":"\u001b[0m14:38:25  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:25.695340","level":"info","event":"\u001b[0m14:38:25  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=5","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:31.639118","level":"info","event":"Command exited with return code 0","logger":"cosmos.hooks.subprocess"}

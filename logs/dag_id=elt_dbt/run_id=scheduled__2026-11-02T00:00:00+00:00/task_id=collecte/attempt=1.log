@@ -1,0 +1,26 @@
+{"timestamp":"2026-11-02T14:37:37.246051","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-11-02T14:37:37.247852","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/elt.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-11-02T14:37:38.676501","level":"info","event":"::group::Cosmos DAG parsing logs","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:37:38.677624","level":"info","event":"Cosmos cache dir resolved to /tmp/cosmos/elt_dbt__dbt","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:37:38.677776","level":"info","event":"Trying to parse the dbt project using dbt ls cache cosmos_cache__elt_dbt__dbt...","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:37:38.689152","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2026-11-02T14:37:44.328188","level":"info","event":"Cosmos performance: time to calculate cache identifier cosmos_cache__elt_dbt__dbt for current version: 0.002555776999997761","logger":"cosmos.cache"}
+{"timestamp":"2026-11-02T14:37:44.328290","level":"info","event":"Cosmos performance [0472832dff46|66]: The cache size for cosmos_cache__elt_dbt__dbt is 9499","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:37:44.328674","level":"info","event":"Cosmos performance: Cache hit for cosmos_cache__elt_dbt__dbt - 4cd7b6cb8c825632f6892eaeedcff9cd,d41d8cd98f00b204e9800998ecf8427e","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:37:44.328764","level":"info","event":"Total nodes: 11","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:37:44.328804","level":"info","event":"Total filtered nodes: 11","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:37:44.328857","level":"info","event":"Cosmos performance (elt_dbt__dbt) - [0472832dff46|66]: It took 5.65s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:37:44.329386","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:37:44.330395","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:37:44.336949","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:37:44.344537","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:37:44.345669","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:37:44.346634","level":"info","event":"Cosmos performance (elt_dbt__dbt) - [0472832dff46|66]: It took 0.0177s to build the Airflow DAG.","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:37:44.346798","level":"info","event":"::endgroup::Cosmos DAG parsing logs","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:37:44.348956","level":"warning","event":"Pydantic serializer warnings:\n  PydanticSerializationUnexpectedValue(Expected `str` - serialized value may not be as expected [input_value={'version': '4cd7b6cb8c82... 'task_group_id': 'dbt'}, input_type=dict])","category":"UserWarning","filename":"/home/airflow/.local/lib/python3.12/site-packages/pydantic/main.py","lineno":463,"logger":"py.warnings"}
+{"timestamp":"2026-11-02T14:37:44.464284","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2026-11-02T14:37:44.466522","level":"warning","event":"empty cryptography key - values will not be stored encrypted.","logger":"airflow.models.crypto"}
+{"timestamp":"2026-11-02T14:37:44.468004","level":"info","event":"Connection Retrieved 'postgres_default'","logger":"airflow.hooks.base"}
+{"timestamp":"2026-11-02T14:37:44.542118","level":"info","event":"5 lignes chargées dans raw.persons pour 2026-11-02","logger":"root"}
+{"timestamp":"2026-11-02T14:37:44.542846","level":"info","event":"Done. Returned value was: 5","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2026-11-02T14:37:44.543343","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01a19cb1-b591-7ec6-897f-ed80ced2c24c'), task_id='collecte', dag_id='elt_dbt', run_id='scheduled__2026-11-02T00:00:00+00:00', try_number=1, map_index=-1, hostname='0472832dff46', context_carrier=None, task=<Task(_PythonDecoratedOperator): collecte>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2026, 11, 2, 14, 37, 35, 707898, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}

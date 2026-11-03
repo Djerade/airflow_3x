@@ -1,0 +1,52 @@
+{"timestamp":"2026-11-02T14:38:32.124082","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-11-02T14:38:32.124692","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/elt.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-11-02T14:38:32.173946","level":"info","event":"::group::Cosmos DAG parsing logs","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:32.175086","level":"info","event":"Cosmos cache dir resolved to /tmp/cosmos/elt_dbt__dbt","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:32.175424","level":"info","event":"Trying to parse the dbt project using dbt ls cache cosmos_cache__elt_dbt__dbt...","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:32.177890","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2026-11-02T14:38:32.193700","level":"info","event":"Cosmos performance: time to calculate cache identifier cosmos_cache__elt_dbt__dbt for current version: 0.0026297050000039235","logger":"cosmos.cache"}
+{"timestamp":"2026-11-02T14:38:32.193945","level":"info","event":"Cosmos performance [0472832dff46|108]: The cache size for cosmos_cache__elt_dbt__dbt is 9499","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:32.194614","level":"info","event":"Cosmos performance: Cache hit for cosmos_cache__elt_dbt__dbt - 4cd7b6cb8c825632f6892eaeedcff9cd,d41d8cd98f00b204e9800998ecf8427e","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:32.194749","level":"info","event":"Total nodes: 11","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:32.194808","level":"info","event":"Total filtered nodes: 11","logger":"cosmos.dbt.graph"}
+{"timestamp":"2026-11-02T14:38:32.194907","level":"info","event":"Cosmos performance (elt_dbt__dbt) - [0472832dff46|108]: It took 0.0197s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:32.195256","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:32.196935","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:32.201431","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:32.202722","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:32.203867","level":"info","event":"Project /opt/airflow/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2026-11-02T14:38:32.205000","level":"info","event":"Cosmos performance (elt_dbt__dbt) - [0472832dff46|108]: It took 0.0101s to build the Airflow DAG.","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:32.205078","level":"info","event":"::endgroup::Cosmos DAG parsing logs","logger":"cosmos.converter"}
+{"timestamp":"2026-11-02T14:38:32.206168","level":"warning","event":"Pydantic serializer warnings:\n  PydanticSerializationUnexpectedValue(Expected `str` - serialized value may not be as expected [input_value={'version': '4cd7b6cb8c82... 'task_group_id': 'dbt'}, input_type=dict])","category":"UserWarning","filename":"/home/airflow/.local/lib/python3.12/site-packages/pydantic/main.py","lineno":463,"logger":"py.warnings"}
+{"timestamp":"2026-11-02T14:38:32.211321","level":"info","event":"Could not import dbtRunner. Falling back to subprocess for invoking dbt.","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:32.211781","level":"info","event":"Cloning project to writable temp directory /tmp/tmps7vlvftf from /opt/airflow/dbt","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:32.212433","level":"info","event":"Partial parse is enabled and the latest partial parse file is /tmp/cosmos/elt_dbt__dbt/target/partial_parse.msgpack","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:32.218454","level":"info","event":"Profile caching is enable.","logger":"cosmos.config"}
+{"timestamp":"2026-11-02T14:38:32.219805","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2026-11-02T14:38:32.220379","level":"warning","event":"empty cryptography key - values will not be stored encrypted.","logger":"airflow.models.crypto"}
+{"timestamp":"2026-11-02T14:38:32.220756","level":"info","event":"Connection Retrieved 'postgres_default'","logger":"airflow.hooks.base"}
+{"timestamp":"2026-11-02T14:38:32.221097","level":"info","event":"Profile found in cache using profile: /tmp/cosmos/profile/7089df7008d33d5c11978915b776450b3c7d142b5a166e550d7df5d94b1a9436/profiles.yml.","logger":"cosmos.config"}
+{"timestamp":"2026-11-02T14:38:32.221576","level":"info","event":"Trying to run the command:\n ['/home/airflow/dbt_venv/bin/dbt', 'run', '--select', 'fqn:elt_demo.marts.persons_summary', '--project-dir', '/tmp/tmps7vlvftf', '--profiles-dir', '/tmp/cosmos/profile/7089df7008d33d5c11978915b776450b3c7d142b5a166e550d7df5d94b1a9436', '--profile', 'elt_demo', '--target', 'dev']\nFrom /tmp/tmps7vlvftf","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:32.221819","level":"info","event":"Tmp dir root location: \n /tmp","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:32.221887","level":"info","event":"Running command: ['/home/airflow/dbt_venv/bin/dbt', 'run', '--select', 'fqn:elt_demo.marts.persons_summary', '--project-dir', '/tmp/tmps7vlvftf', '--profiles-dir', '/tmp/cosmos/profile/7089df7008d33d5c11978915b776450b3c7d142b5a166e550d7df5d94b1a9436', '--profile', 'elt_demo', '--target', 'dev']","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:32.229754","level":"info","event":"Command output:","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.066766","level":"info","event":"\u001b[0m14:38:34  Running with dbt=1.13.0-b1","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.274203","level":"info","event":"\u001b[0m14:38:34  Registered adapter: postgres=1.11.0","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.659604","level":"info","event":"\u001b[0m14:38:34  Found 2 models, 8 data tests, 1 source, 477 macros","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.661585","level":"info","event":"\u001b[0m14:38:34  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.661848","level":"info","event":"\u001b[0m14:38:34  Concurrency: 1 threads (target='dev')","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.662234","level":"info","event":"\u001b[0m14:38:34  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.748856","level":"info","event":"\u001b[0m14:38:34  1 of 1 START sql table model analytics.persons_summary ......................... [RUN]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.894262","level":"info","event":"\u001b[0m14:38:34  1 of 1 OK created sql table model analytics.persons_summary .................... [\u001b[32mSELECT 3\u001b[0m in 0.14s]","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.906398","level":"info","event":"\u001b[0m14:38:34  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.906821","level":"info","event":"\u001b[0m14:38:34  Finished running 1 table model in 0 hours 0 minutes and 0.24 seconds (0.24s).","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.949856","level":"info","event":"\u001b[0m14:38:34  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.950079","level":"info","event":"\u001b[0m14:38:34  \u001b[32mCompleted successfully\u001b[0m","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.950223","level":"info","event":"\u001b[0m14:38:34  ","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:34.950470","level":"info","event":"\u001b[0m14:38:34  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=1","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:37.335007","level":"info","event":"Command exited with return code 0","logger":"cosmos.hooks.subprocess"}
+{"timestamp":"2026-11-02T14:38:37.354456","level":"warning","event":"Airflow 3.0.0 Asset (Dataset) URIs validation rules changed and OpenLineage URIs (standard used by Cosmos) are no longer accepted. Therefore, if using Cosmos with Airflow 3, the Airflow Asset (Dataset) URI is now <postgres://postgres:5432/airflow/analytics/stg_persons>. Before, with Airflow 2.x, the URI used to be <postgres://postgres:5432/airflow.analytics.stg_persons>. Please, change any DAGs that were scheduled using the old standard to the new one.","logger":"cosmos.dataset"}
+{"timestamp":"2026-11-02T14:38:37.793315","level":"warning","event":"Airflow 3.0.0 Asset (Dataset) URIs validation rules changed and OpenLineage URIs (standard used by Cosmos) are no longer accepted. Therefore, if using Cosmos with Airflow 3, the Airflow Asset (Dataset) URI is now <postgres://postgres:5432/airflow/analytics/persons_summary>. Before, with Airflow 2.x, the URI used to be <postgres://postgres:5432/airflow.analytics.persons_summary>. Please, change any DAGs that were scheduled using the old standard to the new one.","logger":"cosmos.dataset"}
+{"timestamp":"2026-11-02T14:38:37.793809","level":"info","event":"Inlets: [Asset(name='postgres://postgres:5432/airflow/analytics/stg_persons', uri='postgres://postgres:5432/airflow/analytics/stg_persons', group='asset', extra={}, watchers=[])]","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:37.793893","level":"info","event":"Outlets: [Asset(name='postgres://postgres:5432/airflow/analytics/persons_summary', uri='postgres://postgres:5432/airflow/analytics/persons_summary', group='asset', extra={}, watchers=[])]","logger":"cosmos.operators.base"}
+{"timestamp":"2026-11-02T14:38:37.793988","level":"info","event":"Assigning outlets with DatasetAlias in Airflow 3","logger":"cosmos.operators.base"}

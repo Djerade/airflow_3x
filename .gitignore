@@ -9,3 +9,5 @@ dbt/logs/
 dbt/.user.yml
 env/
 log/
+# Données climatiques téléchargées
+/data/

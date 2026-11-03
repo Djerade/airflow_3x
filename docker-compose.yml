@@ -21,6 +21,11 @@ x-airflow-common: &airflow-common
     AIRFLOW__API_AUTH__JWT_SECRET: 'nP0FLDJ0wR4ny4WM9YOhTRNsGhHElliGDiBM9w2Gsyk='
     # Connexion utilisée par Cosmos pour construire le profil dbt
     AIRFLOW_CONN_POSTGRES_DEFAULT: 'postgresql://airflow:airflow@postgres:5432/airflow'
+    # MinIO vu par Airflow comme un S3 (S3Hook) : couche bronze
+    AIRFLOW_CONN_MINIO_DEFAULT: '{"conn_type": "aws", "login": "minioadmin", "password": "minioadmin", "extra": {"endpoint_url": "http://minio:9000", "region_name": "us-east-1"}}'
+    # Copernicus CDS (ERA5-Land) : jeton personnel à définir dans .env (CDSAPI_KEY=...)
+    CDSAPI_URL: 'https://cds.climate.copernicus.eu/api'
+    CDSAPI_KEY: '${CDSAPI_KEY:-}'
     DBT_PROJECT_DIR: '/opt/airflow/dbt'
     DBT_EXECUTABLE_PATH: '/home/airflow/dbt_venv/bin/dbt'
   volumes:
@@ -117,6 +122,7 @@ services:
     volumes:
       - minio-data:/data
     restart: always
+
 
 volumes:
   postgres-db-volume:
